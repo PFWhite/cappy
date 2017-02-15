@@ -14,7 +14,7 @@ def get_version_files():
     """
     version_path = config.versions_path
     files = os.listdir(version_path)
-    return [str(f) for f in files if os.path.isfile(os.path.join(version_path, f))]
+    return [str(f) for f in files if os.path.isfile(os.path.join(version_path, f)) and ".json" in f]
 
 def path_for_version(filename):
     """

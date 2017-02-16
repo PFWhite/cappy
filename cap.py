@@ -53,10 +53,10 @@ class API(object):
             post_body['data'] = data
         if post_body.get('fields'):
             del post_body['fields']
-            post_body = self._add_iterable(fields, 'field', post_body)
+            post_body = self._add_iterable(fields, 'fields', post_body)
         if post_body.get('forms'):
             del post_body['forms']
-            post_body = self._add_iterable(forms, 'form', post_body)
+            post_body = self._add_iterable(forms, 'forms', post_body)
         return post_body
 
     def _add_iterable(self, iterable, name, post_body):

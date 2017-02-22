@@ -37,13 +37,13 @@ class API(object):
         so if you need to change them, delete the instance you are using
         and make a new one.
         """
-        def run_call(data=None, forms=[], fields=[]):
+        def run_call(data=None, **kwargs):
             data_copy = copy.copy(self.api_definition[key])
-            body = self._build_post_body(token, data, forms, fields, data_copy)
+            body = self._build_post_body(token, data, data_copy, **kwargs)
             return req.post(endpoint, body)
         return run_call
 
-    def _build_post_body(self, token, data, forms, fields, post_body):
+    def _build_post_body(self, token, data, post_body, **kwargs):
         """
         Constructs a post body for a redcap api call based on what is in
         the versioned api definition json.
@@ -51,13 +51,16 @@ class API(object):
         post_body['token'] = token
         if data:
             post_body['data'] = data
-        if post_body.get('fields'):
-            del post_body['fields']
-            post_body = self._add_iterable(fields, 'fields', post_body)
-        if post_body.get('forms'):
-            del post_body['forms']
-            post_body = self._add_iterable(forms, 'forms', post_body)
-        return post_body
+        post_copy = copy.copy(post_body)
+        for key in post_body:
+            if type(kwargs.get(key)) == type([]):
+                iterable_name = post_body[key][0]
+                post_copy = self._add_iterable(kwargs[key], iterable_name, post_copy)
+            if type(post_copy.get(key)) == type([]):
+                del post_copy[key]
+
+        print(post_copy)
+        return post_copy
 
     def _add_iterable(self, iterable, name, post_body):
         """

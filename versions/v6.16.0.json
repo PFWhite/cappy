@@ -3,7 +3,7 @@
         "token": "",
         "content": "project",
         "format": "json",
-        "return_format": "json"
+        "returnFormat": "json"
     },
     "import_project_info": {
         "token": "",
@@ -15,25 +15,25 @@
         "token": "",
         "content": "instrument",
         "format": "json",
-        "return_format": "json"
+        "returnFormat": "json"
     },
     "export_arms": {
         "token": "",
         "content": "arm",
         "format": "json",
-        "return_format": "json"
+        "returnFormat": "json"
     },
     "export_events": {
         "token": "",
         "content": "event",
         "format": "json",
-        "return_format": "json"
+        "returnFormat": "json"
     },
     "export_metadata": {
         "token": "",
         "content": "metadata",
         "format": "json",
-        "return_format": "json",
+        "returnFormat": "json",
         "fields": [ "fields" ],
         "forms": [ "forms" ]
     },
@@ -41,29 +41,39 @@
         "token": "",
         "content": "record",
         "format": "json",
-        "return_format": "json",
+        "returnFormat": "json",
         "type": "flat",
         "events": true,
         "fields": [ "fields" ],
         "forms": [ "forms" ]
     },
+    "import_records": {
+        "token": "",
+        "content": "record",
+        "format": "json",
+        "returnFormat": "json",
+        "type": "flat",
+        "overwriteBehavior": "normal",
+        "returnContent": "ids",
+        "data": true
+    },
     "import_metadata": {
         "token": "",
         "content": "metadata",
         "format": "json",
-        "return_format": "json",
+        "returnFormat": "json",
         "data": true
     },
     "export_list_of_export_field_names": {
         "token": "",
         "content": "exportFieldNames",
         "format": "json",
-        "return_format": "json"
+        "returnFormat": "json"
     },
     "export_instrument_event_mapping": {
         "token": "",
         "content": "formEventMapping",
         "format": "json",
-        "return_format": "json"
+        "returnFormat": "json"
     }
 }

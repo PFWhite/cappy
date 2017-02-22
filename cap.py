@@ -59,7 +59,6 @@ class API(object):
             if type(post_copy.get(key)) == type([]):
                 del post_copy[key]
 
-        print(post_copy)
         return post_copy
 
     def _add_iterable(self, iterable, name, post_body):

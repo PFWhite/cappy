@@ -22,7 +22,7 @@ class API(object):
         An instance of API that has each top level key as a method.
         These methods will return a requests response object when called
         and will generally do what you expect when calling them with and
-        without arguments.
+        without arguments. Any variadic fields are passed as keyword parameters
         """
         version_path = utils.path_for_version(version_file)
         with open(version_path, 'r') as api_def:
@@ -38,6 +38,14 @@ class API(object):
         and make a new one.
         """
         def run_call(data=None, **kwargs):
+            """
+            The methods on the API instance you will call have this signature.
+
+            Example usage (assuming export_metadata is in the version file):
+            api.export_metadata(forms=['my_redcap_instrument_name'])
+
+            This will call the redcap api with the form arguments filled in correctly
+            """
             data_copy = copy.copy(self.api_definition[key])
             body = self._build_post_body(token, data, data_copy, **kwargs)
             return req.post(endpoint, body)
@@ -54,7 +62,7 @@ class API(object):
         post_copy = copy.copy(post_body)
         for key in post_body:
             if type(kwargs.get(key)) == type([]):
-                iterable_name = post_body[key][0]
+                iterable_name = key
                 post_copy = self._add_iterable(kwargs[key], iterable_name, post_copy)
             if type(post_copy.get(key)) == type([]):
                 del post_copy[key]

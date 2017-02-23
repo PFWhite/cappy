@@ -34,8 +34,8 @@
         "content": "metadata",
         "format": "json",
         "returnFormat": "json",
-        "fields": [ "fields" ],
-        "forms": [ "forms" ]
+        "fields": [],
+        "forms": []
     },
     "export_records": {
         "token": "",
@@ -44,8 +44,8 @@
         "returnFormat": "json",
         "type": "flat",
         "events": true,
-        "fields": [ "fields" ],
-        "forms": [ "forms" ]
+        "fields": [],
+        "forms": []
     },
     "import_records": {
         "token": "",

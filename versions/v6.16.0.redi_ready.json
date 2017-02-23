@@ -66,8 +66,8 @@
     "import_records": {
         "token": "",
         "content": "record",
-        "format": "csv",
-        "returnFormat": "csv",
+        "format": "json",
+        "returnFormat": "json",
         "type": "flat",
         "overwriteBehavior": "normal",
         "returnContent": "ids",

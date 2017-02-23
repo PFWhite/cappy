@@ -1,0 +1,79 @@
+{
+    "export_project_info": {
+        "token": "",
+        "content": "project",
+        "format": "xml",
+        "returnFormat": "xml"
+    },
+    "import_project_info": {
+        "token": "",
+        "content": "project_settings",
+        "format": "xml",
+        "data": true
+    },
+    "export_instruments": {
+        "token": "",
+        "content": "instrument",
+        "format": "xml",
+        "returnFormat": "xml"
+    },
+    "export_arms": {
+        "token": "",
+        "content": "arm",
+        "format": "xml",
+        "returnFormat": "xml"
+    },
+    "export_events": {
+        "token": "",
+        "content": "event",
+        "format": "xml",
+        "returnFormat": "xml"
+    },
+    "export_metadata": {
+        "token": "",
+        "content": "metadata",
+        "format": "xml",
+        "returnFormat": "xml",
+        "fields": [],
+        "forms": []
+    },
+    "export_records": {
+        "token": "",
+        "content": "record",
+        "format": "xml",
+        "returnFormat": "xml",
+        "type": "flat",
+        "events": true,
+        "fields": [],
+        "forms": []
+    },
+    "import_records": {
+        "token": "",
+        "content": "record",
+        "format": "xml",
+        "returnFormat": "xml",
+        "type": "flat",
+        "overwriteBehavior": "normal",
+        "returnContent": "ids",
+        "data": true
+    },
+    "import_metadata": {
+        "token": "",
+        "content": "metadata",
+        "format": "xml",
+        "returnFormat": "xml",
+        "data": true
+    },
+    "export_list_of_export_field_names": {
+        "token": "",
+        "content": "exportFieldNames",
+        "format": "xml",
+        "returnFormat": "xml"
+    },
+    "export_instrument_event_mapping": {
+        "token": "",
+        "content": "formEventMapping",
+        "format": "xml",
+        "returnFormat": "xml"
+    }
+}

@@ -17,11 +17,27 @@
         "format": "csv",
         "returnFormat": "csv"
     },
+    "import_arms": {
+        "token": "",
+        "content": "arm",
+        "action": "import",
+        "format": "csv",
+        "returnFormat": "csv",
+        "data": true
+    },
     "export_arms": {
         "token": "",
         "content": "arm",
         "format": "csv",
         "returnFormat": "csv"
+    },
+    "import_events": {
+        "token": "",
+        "content": "event",
+        "action": "import",
+        "format": "csv",
+        "returnFormat": "csv",
+        "data": true
     },
     "export_events": {
         "token": "",
@@ -69,6 +85,13 @@
         "content": "exportFieldNames",
         "format": "csv",
         "returnFormat": "csv"
+    },
+    "import_instrument_event_mapping": {
+        "token": "",
+        "content": "formEventMapping",
+        "format": "csv",
+        "returnFormat": "csv",
+        "data": true
     },
     "export_instrument_event_mapping": {
         "token": "",

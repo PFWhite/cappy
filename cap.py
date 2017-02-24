@@ -50,7 +50,7 @@ class API(object):
             data_copy = copy.copy(call_definition)
             body = self._build_post_body(token, data, data_copy, **kwargs)
             res = req.post(endpoint, body)
-            return self._enhance_response(response, key, copy.copy(call_definition))
+            return self._enhance_response(res, key, copy.copy(call_definition))
         return run_call
 
     def _build_post_body(self, token, data, post_body, **kwargs):

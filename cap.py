@@ -50,7 +50,7 @@ class API(object):
             data_copy = copy.copy(call_definition)
             body = self._build_post_body(token, data, data_copy, **kwargs)
             res = req.post(endpoint, body)
-            return self._enhance_response(response, copy.copy(call_definition))
+            return self._enhance_response(response, key, copy.copy(call_definition))
         return run_call
 
     def _build_post_body(self, token, data, post_body, **kwargs):
@@ -81,13 +81,14 @@ class API(object):
             post_body['{}[{}]'.format(name, index)] = item
         return post_body
 
-    def _enhance_response(response, call_def):
+    def _enhance_response(response, call_name, call_def):
         """
         This function exists to expose to the end user more information about
         the way in which the request was called. For instance, they may want
         to know what the format of the file returned is.
         """
         response.cappy_data = {
+            "call_name": call_name,
             "file_format": call_def.get("format"),
             "error_format": call_def.get("returnFormat"),
         }

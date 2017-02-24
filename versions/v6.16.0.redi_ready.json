@@ -1,4 +1,11 @@
 {
+    "create_project": {
+        "token": "",
+        "content": "project",
+        "format": "csv",
+        "returnFormat": "csv",
+        "data": true
+    },
     "export_project_info": {
         "token": "",
         "content": "project",

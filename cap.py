@@ -81,7 +81,7 @@ class API(object):
             post_body['{}[{}]'.format(name, index)] = item
         return post_body
 
-    def _enhance_response(response, call_name, call_def):
+    def _enhance_response(self, response, call_name, call_def):
         """
         This function exists to expose to the end user more information about
         the way in which the request was called. For instance, they may want

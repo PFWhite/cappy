@@ -52,6 +52,14 @@
         "format": "csv",
         "returnFormat": "csv"
     },
+    "delete_events": {
+        "token": "",
+        "content": "event",
+        "action": "delete",
+        "format": "json",
+        "returnFormat": "json",
+        "events": []
+    },
     "export_metadata": {
         "token": "",
         "content": "metadata",

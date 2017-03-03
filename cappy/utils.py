@@ -1,6 +1,6 @@
 import json
 import os
-import cappy_config as config
+import cappy.cappy_config as config
 
 def beautify_json(json_data, sort=True):
     """

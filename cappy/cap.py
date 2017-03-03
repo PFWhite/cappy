@@ -3,7 +3,7 @@ import copy
 
 import requests as req
 
-import utils as utils
+import cappy.utils as utils
 
 class API(object):
     """

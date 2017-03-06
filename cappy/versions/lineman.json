@@ -1,0 +1,56 @@
+{
+    "export_instruments": {
+        "token": "",
+        "content": "instrument",
+        "format": "json",
+        "returnFormat": "json"
+    },
+    "export_arms": {
+        "token": "",
+        "content": "arm",
+        "format": "json",
+        "returnFormat": "json"
+    },
+    "export_events": {
+        "token": "",
+        "content": "event",
+        "format": "json",
+        "returnFormat": "json"
+    },
+    "export_metadata": {
+        "token": "",
+        "content": "metadata",
+        "format": "json",
+        "returnFormat": "json",
+        "fields": [],
+        "forms": []
+    },
+    "export_records": {
+        "token": "",
+        "content": "record",
+        "format": "json",
+        "returnFormat": "json",
+        "type": "flat",
+        "events": true,
+        "fields": [],
+        "forms": []
+    },
+    "export_list_of_export_field_names": {
+        "token": "",
+        "content": "exportFieldNames",
+        "format": "json",
+        "returnFormat": "json"
+    },
+    "export_instrument_event_mapping": {
+        "token": "",
+        "content": "formEventMapping",
+        "format": "json",
+        "returnFormat": "json"
+    },
+    "export_instrument_event_mapping": {
+        "token": "",
+        "content": "formEventMapping",
+        "format": "json",
+        "returnFormat": "json"
+    }
+}

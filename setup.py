@@ -1,6 +1,6 @@
 from setuptools import setup
 
-setup(name='python-cappy',
+setup(name='cappy',
       version='0.0.1',
       description='The redcap api you build yourself',
       url='http://github.com/pfwhite/cappy',
@@ -8,5 +8,6 @@ setup(name='python-cappy',
       author_email='pfwhite9@gmail.com',
       license='MIT',
       packages=['cappy'],
+      include_package_data=True,
       install_requires=['requests'],
       zip_safe=False)

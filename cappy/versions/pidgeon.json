@@ -1,0 +1,12 @@
+{
+    "import_records": {
+        "token": "",
+        "content": "record",
+        "format": "json",
+        "returnFormat": "json",
+        "type": "flat",
+        "overwriteBehavior": "normal",
+        "returnContent": "ids",
+        "data": true
+    }
+}

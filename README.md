@@ -1,7 +1,7 @@
 # cappy
 The Redcap API library that you build yourself.
 
-## Idealogy ##
+## Ideology ##
 
 A module should do one thing and do it well. Cappy calls the redcap API. It does not rate limit, it does not
 tell you how to organize the data you get back, it does not handle errors nor declare any new exception types.

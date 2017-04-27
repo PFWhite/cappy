@@ -1,0 +1,23 @@
+# keepATODO.com
+# Keep A TODO LIST: (There is always lots of stuff TODO, so just do it ;)
+Examples:
+
+Completed task logged on 3/1 and completed on 3/2
+
+    TODO: [x] (senrabc@gmail.com)20170301 20170302 Review Patrick's pull request +TodoTxtTouch @github
+
+High priority new task
+
+    TODO: [A] (senrabc@gmail.com)20170301 20170302  This is the text of my TODO item. +HCVProject @gitrepo(location, etc..)
+
+Medium priority new task
+
+    TODO: [B] (senrabc@gmail.com)20170301 20170302 This is the text of my TODO item. +context @phonecall
+
+Low priority task
+
+    TODO: [C] (senrabc@gmail.com)20170301 20170302 This is the text of my TODO item. +context @webserver
+
+    TODO: [C] (senrabc@gmail.com)2017
+    TODO: [C] (senrabc@gmail.com)2017
+    TODO: [C] (senrabc@gmail.com)2017

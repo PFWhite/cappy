@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='cappy',
-      version='0.0.1',
+      version='1.0.0',
       description='The redcap api you build yourself',
       url='http://github.com/pfwhite/cappy',
       author='Patrick White',

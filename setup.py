@@ -9,5 +9,5 @@ setup(name='cappy',
       license='MIT',
       packages=['cappy'],
       include_package_data=True,
-      install_requires=['requests'],
+      install_requires=['requests', 'pyyaml'],
       zip_safe=False)

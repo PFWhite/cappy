@@ -1,8 +1,8 @@
 # Purpose of these files #
 
-These json files define different ways to produce API instances.
+These yaml and json files define different ways to produce API instances.
 
-Every top level key is a method on the API instance and the object corresponding to that key
+Every top level key or api_def level key is a method on the API instance and the object corresponding to that key
 is the post body that is given when viewed on the API playground screen in RedCap.
 
 Any iterable / list-like argument (i.e. forms, fields) should have an array as its value in the 

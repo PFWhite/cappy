@@ -1,0 +1,142 @@
+# This cappy file has been tested with redcap 6.16.x and 6.13.0
+# and should be used if you dont have a more specific version file
+
+# read the following link for information about what << means
+# https://web.archive.org/web/20130213112648/http://blog.101ideas.cz/posts/dry-your-yaml-files.html
+
+# WARNING this is the most permissive cappy version file and can WIPE
+# the redcap completely
+helpers:
+  export: &export
+    token: ''
+  import: &import
+    token: ''
+    data: true
+  # some redcap functions require an action key value pair
+  # empirically this is used to delineate between deletes and imports
+  actions:
+    import: &action_import
+      action: import
+    delete: &action_delete
+      action: delete
+  iterables: &iters
+    forms: []
+    fields: []
+  formats:
+    json: &json
+      format: json
+      returnFormat: json
+    csv: &csv
+      format: csv
+      returnFormat: csv
+    csv_in_json_error: &csv_in_json_error
+      format: csv
+      returnFormat: json
+  contents:
+    - &project project
+    - &event event
+    - &arm arm
+    - &metadata metadata
+    - &record record
+    - &instrument instrument
+    - &instrument_event formEventMapping
+  
+api_def:
+  # project info
+  export_project_info:
+    <<: *export
+    <<: *json
+    content: *project
+  import_project_info:
+    <<: *import
+    <<: *json
+    content: *project
+
+  # arms
+  export_arms:
+    <<: *export
+    <<: *json
+    content: *arm
+  import_arms:
+    <<: *import
+    <<: *json
+    <<: *action_import
+    content: *arm
+
+  # events
+  export_events:
+    <<: *export
+    <<: *json
+    content: *event
+  import_events:
+    <<: *import
+    <<: *json
+    <<: *action_import
+    content: *event
+  delete_events:
+    token: ''
+    events: []
+    <<: *json
+    <<: *action_delete
+    content: *event
+
+  # instrument_event_mapping
+  export_instrument_event_mapping:
+    <<: *export
+    <<: *json
+    content: *instrument_event
+  import_instrument_event_mapping:
+    <<: *import
+    <<: *json
+    content: *instrument_event
+
+  # instruments
+  export_instruments:
+    <<: *export
+    <<: *json
+    content: *instrument
+
+  # metadata
+  # It has been observed that the only working format
+  # for metadata imports is csv so that is the default here
+  export_metadata:
+    <<: *export
+    <<: *csv_in_json_error
+    <<: *iters
+    content: *metadata
+  import_metadata:
+    <<: *import
+    <<: *csv_in_json_error
+    content: *metadata
+  export_metadata_json: 
+    <<: *export
+    <<: *json
+    <<: *iters
+    content: *metadata
+  import_metadata_json:
+    <<: *import
+    <<: *json
+    content: *metadata
+
+  # records
+  export_records:
+    <<: *export
+    <<: *json
+    <<: *iters
+    content: *record
+    # events takes a list of unique_event_name
+    events: []
+    # this records iterable is for getting the records pretaining
+    # to a specific unique_field subject
+    records: []
+  import_records: &import_records
+    <<: *import
+    <<: *json
+    content: *record
+    returnContent: ids
+    type: flat
+    overwriteBehavior: normal
+  import_records_overwrite:
+    <<: *import_records
+    overwriteBehavior: overwrite
+  

@@ -29,7 +29,7 @@ class API(object):
         auto generated API functions
         """
         version_path = utils.path_for_version(version_file)
-        self.requests_options = requests_options
+        self.requests_options = requests_options or {}
         with open(version_path, 'r') as api_def:
             version_data = yaml.load(api_def.read())
             self.api_definition = version_data.get('api_def') or version_data

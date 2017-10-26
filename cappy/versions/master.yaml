@@ -141,7 +141,6 @@ api_def:
     content: *record
     token: ''
     records: []
-    arm: ''
   import_records_overwrite:
     <<: *import_records
     overwriteBehavior: overwrite

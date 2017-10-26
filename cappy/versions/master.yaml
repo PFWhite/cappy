@@ -136,6 +136,12 @@ api_def:
     returnContent: ids
     type: flat
     overwriteBehavior: normal
+  delete_records:
+    <<: *action_delete
+    content: *record
+    token: ''
+    records: []
+    arm: ''
   import_records_overwrite:
     <<: *import_records
     overwriteBehavior: overwrite
